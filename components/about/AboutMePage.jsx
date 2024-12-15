@@ -14,13 +14,19 @@ const AboutMePage = () => {
           <div className="w-[100%] md:w-[40%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <div className="hidden md:block">
-                <div className=" flex items-center justify-center relative">
-                  <div className="gradient-circle-about absolute mt-36">
+                <div className="flex items-center justify-center relative">
+                  {/* Sun-like blurred background */}
+                  <div className="absolute inset-0 flex justify-center items-center">
+                    <div className="w-[300px] h-[300px] rounded-full bg-gradient-to-br from-[#BFFD3D] to-[#7CE495] blur-[100px] opacity-50"></div>
+                  </div>
+
+                  {/* Foreground content */}
+                  <div className="gradient-circle-about relative z-10">
                     <Image
                       width={800}
                       height={1050}
-                      src="/assets/home/Component 19 (1).png"
-                      alt="AR Sahak"
+                      src="/assets/home/abu-hero.png"
+                      alt="Abu Kawsar"
                       className="w-[380px] h-auto mx-auto absolute inset-0 top-[20%] left-0 right-0"
                       priority
                     />
@@ -32,15 +38,15 @@ const AboutMePage = () => {
           <div className="w-[100%] md:w-[60%] md:mt-0 mt-10">
             <ScrollMotionEffect effect="fade-left" duration="2000">
               <h2
-                className={`text-white text-4xl md:text-5xl mb-10 text-center md:text-left ${orbitron.className} `}
+                className={`text-white text-4xl md:text-5xl mb-10 text-center md:text-left  font-semibold ${orbitron.className} `}
               >
                 About Me
               </h2>
               <p className="mb-6 text-base text-center text-white md:text-lg md:text-left">
-                {`I’m AR Sahak, a passionate Full Stack Developer focused on creating seamless and innovative web experiences. I graduated from Jiangsu University of Science and Technology, China, and currently work at Bayshore Communication in Dhaka, Bangladesh. I specialize in building responsive front-end interfaces using React and Next Js, and developing robust back-end systems with Node.js and Express. I am experienced in managing databases like MySQL, PostgreSQL, and MongoDB.`}
+                {`I’m Abu Kawsar, a skilled UI/UX Designer and Frontend Developer with 2 years of experience creating intuitive and visually appealing digital experiences. I specialize in crafting user-friendly designs using tools like Figma transforming them into responsive, high-performance web interfaces using modern technologies like React, Next.js, and Tailwind CSS.`}
               </p>
               <p className="text-base text-center text-white md:text-lg md:text-left">
-                {`I am skilled in designing RESTful APIs, implementing microservices, and deploying applications on AWS and Azure. I thrive in Agile environments, using Git for version control, and continually learning new technologies to deliver high-performance, secure, and user-friendly applications.`}
+                {`I have a strong passion for merging creativity with functionality, ensuring every project not only looks great but also delivers a seamless user experience. My goal is to continuously innovate and bring impactful solutions to life.`}
               </p>
             </ScrollMotionEffect>
             <div className="mt-12 md:mt-20">

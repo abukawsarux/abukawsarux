@@ -5,10 +5,12 @@ import { Orbitron } from "next/font/google";
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaBehance, FaDribbble, FaFigma } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaStackOverflow } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import {
+  FaBehance,
+  FaDribbble,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
 
 import CountUp from "../shared/CountUp";
@@ -32,17 +34,17 @@ const HeroSection = () => {
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
       >
         <div className="container">
-          <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-            <div className="w-full md:w-[50%]">
+          <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="w-full max-w-screen-lg mx-auto">
               <motion.h2
                 variants={variants}
-                className="flex items-center justify-center md:justify-start text-xl md:text-3xl font-black text-white text-center md:text-left"
+                className="flex items-center justify-center md:justify-center text-xl md:text-3xl font-black text-white text-center "
               >
                 <hr className="w-8 h-[2px] bg-black my-2 mr-2" />
                 Hello, I’m 👋
               </motion.h2>
               <h1
-                className={`mt-4 md:mt-10 text-[50px] md:text-[80px] font-extrabold text-white text-center md:text-left leading-tight tracking-normal ${orbitron.className}`}
+                className={`mt-4 md:mt-10 text-[50px] md:text-[80px] font-extrabold text-white text-center  leading-tight tracking-normal ${orbitron.className}`}
               >
                 {text.map((word, index) => (
                   <motion.span
@@ -57,18 +59,18 @@ const HeroSection = () => {
               </h1>
               <motion.p
                 variants={variants}
-                className="mt-5 text-md md:text-3xl font-semibold text-center md:text-left text-white"
+                className="mt-5 text-md md:text-3xl font-semibold text-center  text-white"
               >
                 <span className="text-primary">User Experience Engineer</span>
               </motion.p>
 
               <motion.div
                 variants={variants}
-                className="flex justify-center md:justify-start mt-8"
+                className="flex items-baseline justify-center md:justify-center mt-8"
               >
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center h-[60px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white uppercase bg-black border border-black rounded-md hover:bg-primary md:px-8 me-3 md:me-6 primary-gradient"
+                  className="flex items-center justify-center h-[60px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-black uppercase bg-black border border-black rounded-md hover:bg-primary md:px-8 me-3 md:me-6 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   Let’s Talk
                   <span className="ml-2">
@@ -88,7 +90,7 @@ const HeroSection = () => {
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="flex items-center justify-center h-[54px] md:h-[56px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white bg-black hover:bg-gradient-to-r from-[#BFFD3D] to-[#2a1454] border-gradient rounded-full"
+                  className="flex items-center justify-center h-[54px] md:h-[56px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white bg-black hover:primary-gradient border-gradient rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   My Work
                   <span className="ml-2">
@@ -109,45 +111,42 @@ const HeroSection = () => {
               </motion.div>
               <motion.div
                 variants={variants}
-                className="flex items-center justify-center md:justify-start mt-6 md:mt-16 text-md md:text-3xl text-white"
+                className="flex items-center justify-center gap-4  mt-6 md:mt-16 text-md md:text-3xl text-white"
               >
                 <div
-                  className={`text-3xl font-semibold w-20 ${orbitron.className}`}
+                  className={`text-3xl font-semibold w-12 ${orbitron.className}`}
                 >
-                  <CountUp start={1} end={20} duration={5} />
+                  <CountUp start={1} end={11} duration={5} />
                 </div>
-                <p className="text-lg text-[#dbdbdb] ml-2">Worldwide Client</p>
+                <p className="text-lg text-[#dbdbdb] ">Worldwide Client</p>
                 <p className="text-lg text-[#dbdbdb] mx-2">|</p>
-                <div className="flex items-center gap-2">
-                  <Link href="https://github.com/abukawsar47" target="_blank">
+                <div className="flex items-center gap-2 md:gap-6">
+                  <Link href="https://behance.net/abukawsarux" target="_blank">
+                    <FaBehance className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
+                  </Link>
+
+                  <Link href="https://dribbble.com/abukawsarux" target="_blank">
+                    <FaDribbble className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
+                  </Link>
+
+                  <Link href="https://github.com/abukawsarux" target="_blank">
                     <VscGithub className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
                   </Link>
+
                   <Link
-                    href="https://stackoverflow.com/users/15496362/ar-sahak"
+                    href="https://linkedin.com/in/abukawsarux/"
                     target="_blank"
                   >
-                    <FaStackOverflow className="text-[#dbdbdb] size-6 cursor-pointer hover:text-primary" />
+                    <FaLinkedinIn className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
                   </Link>
-                  <Link href="https://leetcode.com/u/arsahak/" target="_blank">
-                    <SiLeetcode className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
+                  <Link
+                    href="https://facebook.com/abukawsarux/"
+                    target="_blank"
+                  >
+                    <FaFacebookF className="text-[#dbdbdb] size-5 cursor-pointer hover:text-primary" />
                   </Link>
                 </div>
               </motion.div>
-            </div>
-
-            <div className="hidden md:block w-full md:w-[50%]">
-              <div className=" flex items-center justify-center relative">
-                <div className="gradient-circle absolute mt-36">
-                  <Image
-                    width={1000}
-                    height={1050}
-                    src="/assets/home/Component 19.png"
-                    alt="AR Sahak"
-                    className="w-[400px] h-auto mx-auto absolute inset-0 top-[18%] left-0 right-0"
-                    priority
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>

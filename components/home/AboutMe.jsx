@@ -10,18 +10,18 @@ const AboutMe = () => {
   return (
     <section className="py-1 md:py-20">
       <div className="container">
-        <div className="flex flex-col items-center justify-between md:flex-row gap-x-10">
+        <div className="flex flex-col items-center justify-between md:flex-row gap-x-10 gap-y-6">
           <div className="w-[100%] md:w-[40%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
-              <div className="hidden md:block">
-                <div className="flex items-center justify-center relative">
-                  <div className="gradient-circle-about absolute mt-36">
+              <div className="">
+                <div className="flex items-center justify-center ">
+                  <div className="  ">
                     <Image
                       width={800}
                       height={1050}
-                      src="/assets/home/Component 19 (1).png"
+                      src="/assets/home/abu-hero.png"
                       alt="AR Sahak"
-                      className="w-[380px] h-auto mx-auto absolute inset-0 top-[20%] left-0 right-0"
+                      className=""
                       priority
                     />
                   </div>
@@ -29,10 +29,10 @@ const AboutMe = () => {
               </div>
             </ScrollMotionEffect>
           </div>
-          <div className="w-[100%] md:w-[60%] md:mt-0 mt-10">
+          <div className="w-[100%] md:w-[60%] md:mt-0 ">
             <ScrollMotionEffect effect="fade-left" duration="2000">
               <h2
-                className={`text-white text-4xl md:text-5xl mb-10 text-center md:text-left ${orbitron.className} `}
+                className={`text-white text-4xl md:text-5xl mb-10 text-center md:text-left  font-semibold ${orbitron.className} `}
               >
                 About Me
               </h2>
@@ -44,8 +44,9 @@ const AboutMe = () => {
               </p>
               <div className="flex justify-center md:justify-start">
                 <Link
-                  href={"/assets/arsahak-resume.pdf"}
-                  className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-white md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient"
+                  href={"/assets/AbuKawsar_UIUX_Engineer.pdf"}
+                  target="_blank"
+                  className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   View Resume
                   <span>
@@ -53,7 +54,7 @@ const AboutMe = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="ml-2 text-white size-4 md:size-5"
+                      className="ml-2 text-black size-4 md:size-5"
                     >
                       <path
                         fillRule="evenodd"

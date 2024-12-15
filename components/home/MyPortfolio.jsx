@@ -63,7 +63,7 @@ const MyPortfolio = () => {
           <div className="w-[100%] md:w-[45%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <h2
-                className={` text-4xl md:text-5xl text-center md:text-left ${orbitron.className}`}
+                className={` text-4xl md:text-5xl text-center md:text-left  font-semibold ${orbitron.className}`}
               >
                 My Recent Work
               </h2>
@@ -271,10 +271,10 @@ const MyPortfolio = () => {
           </ScrollMotionEffect>
           <div className="flex justify-center mx-0 mt-16">
             <ScrollMotionEffect effect="fade-up" duration="2000">
-              <div className="p-[2px] bg-gradient-to-r from-[#BFFD3D] to-[#2a1454] rounded-md">
+              <div className="p-[2px] bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] rounded-md">
                 <Link
                   href={"/portfolio"}
-                  className="flex items-center justify-center h-[54px] md:h-[56px] w-44 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white bg-black rounded-md  hover:bg-gradient-to-r from-[#BFFD3D] to-[#2a1454]"
+                  className="flex items-center justify-center h-[54px] md:h-[56px] w-44 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white hover:text-black bg-black rounded-md  hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495]"
                 >
                   View All Works
                   <span className="ml-2">

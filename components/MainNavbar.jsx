@@ -70,9 +70,9 @@ const MainNavbar = () => {
         <div className="flex items-center justify-between">
           <Link href={"/"}>
             <h2
-              className={`font-semibold text-[40px] text-white ${lato.className}`}
+              className={`font-semibold text-3xl text-white ${lato.className}`}
             >
-              @abukawsar
+              @abukawsarux
             </h2>
           </Link>
           <div className="flex items-center justify-end gap-x-8">
@@ -86,12 +86,12 @@ const MainNavbar = () => {
               </Link>
             ))}
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center ">
             {/* <MdOutlineLightMode className="text-black size-7 cursor-pointer hover:text-primary" /> */}
             <Link
               target="_blank"
-              className="flex items-center justify-center px-2 !py-2 mb-2 text-sm font-medium text-white  hover:bg-primary md:text-lg md:px-4 rounded-md primary-gradient"
-              href="https://www.upwork.com/freelancers/~01ee4ec811fe032f23"
+              className="flex items-center justify-center px-2 !py-2 mb-2 text-sm font-medium text-black  hover:bg-primary md:text-lg md:px-4 rounded-md primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+              href="#"
             >
               {`Hire Me!`}
 
@@ -100,7 +100,7 @@ const MainNavbar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="ml-2 text-white size-5"
+                  className="ml-2 text-black size-5"
                 >
                   <path
                     fillRule="evenodd"

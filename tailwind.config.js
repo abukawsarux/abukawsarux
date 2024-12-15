@@ -19,7 +19,8 @@ module.exports = {
         bgSecondary: "#181818",
       },
       backgroundImage: {
-        primaryGradient: "linear-gradient(90deg, #BFFD3D 0%, #2A1454 100%)",
+        primaryGradient: "linear-gradient(90deg, #BFFD3D 0%, #7CE495 100%)",
+        secondaryGradient: "linear-gradient(90deg, #FF7C4D 0%, #FFB84D 100%)",
       },
     },
     container: {

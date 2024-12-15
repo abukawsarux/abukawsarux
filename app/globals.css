@@ -194,30 +194,20 @@ video::-webkit-media-controls-panel {
   background-repeat: no-repeat;
 }
 
-.gradient-circle-about {
-  width: 100%;
-  height: 100vh; /* Adjust to control height */
-  background-image: radial-gradient(
-      circle at 47% 43%,
-      #6c17ff46,
-      transparent 40%
-    ),
-    radial-gradient(circle at 86% 42%, rgba(157, 89, 251, 0), transparent 20%);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .custom-gradient {
   background: linear-gradient(to bottom, #ffead9 30%, black 70%);
 }
 
 .primary-gradient {
-  background: linear-gradient(90deg, #bffd3d, #2a1454);
+  background: linear-gradient(90deg, #bffd3d, #7ce495);
+}
+.secondaryGradient {
+  background: linear-gradient(90deg, #ff7c4d 0%, #ffb84d 100%);
 }
 
 .border-gradient {
   border: 2px solid transparent; /* Sets up the border width */
-  border-image: linear-gradient(90deg, #bffd3d, #2a1454) 1; /* Creates the gradient border */
+  border-image: linear-gradient(90deg, #bffd3d, #7ce495) 1; /* Creates the gradient border */
   border-radius: 5px; /* Rounds the corners of the border */
 }
 

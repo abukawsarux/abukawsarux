@@ -55,7 +55,7 @@ const LetsTalk = () => {
             </p>
             <div className="flex items-center justify-center">
               <Link
-                className="flex items-center justify-center px-2 !py-3 mb-2 text-sm font-medium text-white uppercase hover:bg-primary md:text-lg md:px-8 me-3 md:me-6 rounded-md w-52 primary-gradient"
+                className="flex items-center justify-center px-2 !py-3 mb-2 text-sm font-medium text-black uppercase hover:bg-primary md:text-lg md:px-8 me-3 md:me-6 rounded-md w-52 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 href="/contact"
               >
                 {`Let’s Talk`}
@@ -65,7 +65,7 @@ const LetsTalk = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="ml-2 text-white size-5"
+                    className="ml-2 text-black size-5"
                   >
                     <path
                       fillRule="evenodd"

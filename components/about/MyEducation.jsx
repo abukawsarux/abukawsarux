@@ -55,7 +55,7 @@ const MyEducation = () => {
         <div className="mt-10 md:mt-16">
           {workExperience?.map((el, index) => (
             <div
-              className={` p-5 flex md:flex-row flex-col items-center justify-between my-4 rounded-md ${index === 0 ? "primary-gradient" : "bg-[#0A0A0A]"}`}
+              className={` p-5 flex md:flex-row flex-col items-center justify-between my-4 rounded-md ${index === 0 ? "primary-gradient " : "bg-[#0A0A0A]"}`}
             >
               <div className="w-full md:w-[15%]  mx-0 mt-3 md:mt-0">
                 <Image

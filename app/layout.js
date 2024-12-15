@@ -15,10 +15,10 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "AR Sahak | Portfolio",
+  title: "Abu Kawsar | Portfolio",
   description:
-    "Explore the portfolio of AR Sahak, a passionate Full Stack Developer skilled in building seamless, innovative, and scalable web applications using modern front-end and back-end technologies.",
-  metadataBase: new URL("https://arsahak.online"),
+    "Explore the portfolio of Abu Kawsar, a passionate User Experience Engineer skilled in building seamless, innovative, and scalable web applications using modern design and frontend development technologies.",
+  metadataBase: new URL("https://abukawsarux.vercel.com"),
   alternates: {
     canonical: "/",
     languages: {

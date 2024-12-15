@@ -34,7 +34,7 @@ const NewsSection = () => {
           <div className="w-[100%] md:w-[35%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <h2
-                className={` text-4xl md:text-5xl text-center md:text-left ${orbitron.className}`}
+                className={` text-4xl md:text-5xl text-center md:text-left font-semibold ${orbitron.className}`}
               >
                 Recent News
               </h2>
