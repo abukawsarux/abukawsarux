@@ -19,7 +19,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    images: "https://abukawsarux.vercel.app/opengraph-image.jpg", // Full URL to the OG image
+    images: "/opengraph-image.jpg",
   },
 };
 
