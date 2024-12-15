@@ -6,7 +6,22 @@ import MySkills from "@/components/home/MySkills";
 import MySpecialties from "@/components/home/MySpecialties";
 import NewsSection from "@/components/home/NewsSection";
 
-import ClinetLogoList from "@/components/shared/ClientLogoList";
+// import ClinetLogoList from "@/components/shared/ClientLogoList";
+
+export const metadata = {
+  title: "Abu Kawsar | UI/UX Designer | Portfolio",
+  description:
+    "Explore the portfolio of Abu Kawsar, a passionate User Experience Engineer skilled in building seamless, innovative, and scalable web applications using modern design and frontend development technologies.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-USA",
+    },
+  },
+  openGraph: {
+    images: "/opengraph-image.jpg",
+  },
+};
 
 export default function Home() {
   return (

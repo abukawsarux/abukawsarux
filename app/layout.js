@@ -15,19 +15,7 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "Abu Kawsar | UI/UX Designer | Portfolio",
-  description:
-    "Explore the portfolio of Abu Kawsar, a passionate User Experience Engineer skilled in building seamless, innovative, and scalable web applications using modern design and frontend development technologies.",
   metadataBase: new URL("https://abukawsarux.vercel.com"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-USA",
-    },
-  },
-  openGraph: {
-    images: "/opengraph-image.png",
-  },
 };
 
 export default function RootLayout({ children }) {
