@@ -15,7 +15,7 @@ const lato = Lato({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://abukawsarux.vercel.com"),
+  metadataBase: new URL("https://abukawsarux.vercel.app/"),
 };
 
 export default function RootLayout({ children }) {
