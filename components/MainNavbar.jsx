@@ -123,9 +123,9 @@ const MainNavbar = () => {
             <NavbarBrand>
               <Link href="/">
                 <h2
-                  className={`font-semibold text-[30px] text-white ${lato.className}`}
+                  className={`font-semibold text-[24px] text-white ${lato.className}`}
                 >
-                  @arsahak
+                  @abukawsarux
                 </h2>
               </Link>
             </NavbarBrand>
