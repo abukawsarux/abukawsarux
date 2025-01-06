@@ -20,7 +20,7 @@ const AboutMe = () => {
                       width={800}
                       height={1050}
                       src="/assets/home/abu-hero.png"
-                      alt="AR Sahak"
+                      alt="Abu Kawsar"
                       className=""
                       priority
                     />
@@ -37,7 +37,7 @@ const AboutMe = () => {
                 About Me
               </h2>
               <p className="mb-6 text-base text-center text-white md:text-lg md:text-left">
-                {`I’m AR Sahak, a passionate Full Stack Developer focused on creating seamless and innovative web experiences. I graduated from Jiangsu University of Science and Technology, China, and currently work at Bayshore Communication in Dhaka, Bangladesh. I specialize in building responsive front-end interfaces using React and Next Js, and developing robust back-end systems with Node.js and Express. I am experienced in managing databases like MySQL, PostgreSQL, and MongoDB.`}
+                {`I’m Abu Kawsar, a passionate Full Stack Developer focused on creating seamless and innovative web experiences. I graduated from Jiangsu University of Science and Technology, China, and currently work at Bayshore Communication in Dhaka, Bangladesh. I specialize in building responsive front-end interfaces using React and Next Js, and developing robust back-end systems with Node.js and Express. I am experienced in managing databases like MySQL, PostgreSQL, and MongoDB.`}
               </p>
               <p className="text-base text-center text-white md:text-lg md:text-left">
                 {`I am skilled in designing RESTful APIs, implementing microservices, and deploying applications on AWS and Azure. I thrive in Agile environments, using Git for version control, and continually learning new technologies to deliver high-performance, secure, and user-friendly applications.`}

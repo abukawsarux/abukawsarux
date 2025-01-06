@@ -149,7 +149,7 @@ const MySpecialties = () => {
                 <div className="flex items-center rounded-full">
                   <Image
                     src="/assets/home/abu-about.png"
-                    alt="AR Sahak"
+                    alt="Abu Kawsar"
                     width={250}
                     height={250}
                     className="w-[200px] h-auto rounded-full group-hover:drop-shadow-[0_2px_2px_rgba(191,253,61,0.5)]transition-all duration-400"
