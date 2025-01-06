@@ -30,7 +30,7 @@ const Footer = () => {
             <h2
               className={`font-semibold text-[35px] md:text-[45px] text-white ${orbitron.className}`}
             >
-              AR Sahak.
+              Abu kawsar.
             </h2>
             <div className="flex justify-center flex-1 my-8 md:my-2">
               <ul className="flex flex-col items-center justify-center ml-0 font-normal text-center text-white list-none md:flex-row">
@@ -73,7 +73,7 @@ const Footer = () => {
       <div className="bg-[#181818]">
         <div className="container flex items-center justify-center py-3 md:py-6">
           <p className="mb-4 text-center text-white text-[14px] md:text-[18px] md:mb-0">
-            © 2024 AR Sahak. All Rights Reserved , Inc.
+            © 2024 Abu kawsar. All Rights Reserved , Inc.
           </p>
         </div>
       </div>
