@@ -11,7 +11,6 @@ import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
-import { MdMarkEmailUnread } from "react-icons/md";
 import GoogleMap from "../shared/GoogleMap";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
@@ -127,39 +126,38 @@ const ContactSection = () => {
         <div className="grid items-start justify-between grid-cols-1 mt-12 lg:grid-cols-3 md:gap-x-10 gap-x-0 md:mt-20">
           <div className="bg-[#181818] p-6 rounded-2xl gap-y-14">
             <ScrollMotionEffect effect="fade-up" duration="2000">
-              <h2 class="text-2xl font-semibold text-white py-6 border-b-1 border-gray-400">
+              <h2 class="text-2xl font-semibold text-white py-6 border-b-1 border-[#222121]">
                 Contact Details
               </h2>
               <ul class="space-y-1 text-white list-none list-inside">
-                <li className="py-6 border-gray-600 border-b-1">
+                <li className="py-6 border-[#222121] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
-                      <IoLocationSharp className="text-[#BFA46B] size-7" />
+                      <IoLocationSharp className="text-primary size-7" />
                     </span>
                     <h5 className="text-2xl font-semibold text-white">Email</h5>
                   </div>
                   <h5 className="mt-5 text-xl font-normal text-white">
-                    arsahakbd@gmail.com
+                    abukawsar47ak@gmail.com
                   </h5>
                 </li>
-                <li className="py-6 border-gray-600 border-b-1">
+                <li className="py-6 border-[#222121] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
-                      <FaPhoneAlt className="text-[#BFA46B] size-6" />
+                      <FaPhoneAlt className="text-primary size-6" />
                     </span>
                     <h5 className="text-2xl font-semibold text-white">
                       Contact
                     </h5>
                   </div>
                   <h5 className="mt-5 text-xl font-normal text-white">
-                    01792843207,{"   "}
-                    <span className="text-[#BFA46B] ml-1">01575318540</span>
+                    +880 1307102810
                   </h5>
                 </li>
-                <li className="py-6 border-gray-600 border-b-1">
+                <li className="py-6 border-[#222121] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
-                      <IoLocationSharp className="text-[#BFA46B] size-7" />
+                      <IoLocationSharp className="text-primary size-7" />
                     </span>
                     <h5 className="text-2xl font-semibold text-white">
                       Location
@@ -184,7 +182,7 @@ const ContactSection = () => {
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Enter Name</p>
                     <input
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="Sadit Hasan"
                       required
                       type="text"
@@ -197,12 +195,12 @@ const ContactSection = () => {
                         });
                       }}
                     />
-                    <span className="text-orange-600">{formErrors.name}</span>
+                    <span className="text-red-600">{formErrors.name}</span>
                   </div>
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Phone</p>
                     <input
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="+1 408 XXX XXXX"
                       required
                       type="text"
@@ -215,7 +213,7 @@ const ContactSection = () => {
                         });
                       }}
                     />
-                    <span className="text-orange-600">{formErrors.phone}</span>
+                    <span className="text-red-600">{formErrors.phone}</span>
                   </div>
                 </div>
 
@@ -223,7 +221,7 @@ const ContactSection = () => {
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Enter Email</p>
                     <input
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="example@gmail.com"
                       required
                       type="email"
@@ -236,12 +234,12 @@ const ContactSection = () => {
                         });
                       }}
                     />
-                    <span className="text-orange-600">{formErrors.email}</span>
+                    <span className="text-red-600">{formErrors.email}</span>
                   </div>
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Country</p>
                     <input
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="USA"
                       required
                       type="text"
@@ -254,9 +252,7 @@ const ContactSection = () => {
                         });
                       }}
                     />
-                    <span className="text-orange-600">
-                      {formErrors.country}
-                    </span>
+                    <span className="text-red-600">{formErrors.country}</span>
                   </div>
                 </div>
 
@@ -267,7 +263,7 @@ const ContactSection = () => {
                   <textarea
                     rows={10}
                     id="message"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5 mt-3"
+                    class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5 mt-3"
                     placeholder="Write here..."
                     required
                     name="message"
@@ -279,12 +275,12 @@ const ContactSection = () => {
                       });
                     }}
                   />
-                  <span className="text-orange-600">{formErrors.message}</span>
+                  <span className="text-red-600">{formErrors.message}</span>
                 </div>
                 {loading ? (
                   <Button
                     isLoading
-                    className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-white border border-white bg-none hover:bg-primary hover:border-primary md:text-lg md:px-8 me-0 md:me-6 rounded-md bg-transparent"
+                    className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-white border border-white bg-none hover:bg-primary hover:border-primary hover:text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md bg-transparent"
                     radius="sm"
                     size="lg"
                   >
@@ -292,7 +288,7 @@ const ContactSection = () => {
                   </Button>
                 ) : (
                   <Button
-                    className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-white border border-white bg-none hover:bg-primary hover:border-primary md:text-lg md:px-8 me-0 md:me-6 rounded-md bg-transparent"
+                    className="group flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-white border border-white bg-none hover:bg-primary hover:border-primary hover:text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md bg-transparent"
                     radius="sm"
                     size="lg"
                     onClick={handleSubmit}
@@ -303,7 +299,7 @@ const ContactSection = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="ml-2 text-white size-5"
+                        className="ml-2 text-white group-hover:text-black gr duration-300 size-5"
                       >
                         <path
                           fillRule="evenodd"
