@@ -30,7 +30,7 @@ const MyWorkExperience = () => {
   return (
     <section className="bg-[#181818] py-6 md:py-16">
       <div className="container">
-        <div className="flex flex-col justify-center text-white md:flex-row md:justify-between md:items-start gap-y-4">
+        <div className="flex flex-col justify-center text-black md:flex-row md:justify-between md:items-start gap-y-4">
           <div className="w-full md:w-[40%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <h2
@@ -55,7 +55,7 @@ const MyWorkExperience = () => {
         <div className="mt-10 md:mt-16">
           {workExperience?.map((el, index) => (
             <div
-              className={` p-5 flex md:flex-row flex-col items-center justify-between my-4 rounded-md ${index === 0 ? "primary-gradient" : "bg-[#0A0A0A]"}`}
+              className={`group p-10 flex md:flex-row flex-col items-center justify-between my-4 rounded-2xl bg-[#0A0A0A] hover:bg-gradient-to-r hover:from-[#BFFD3D] hover:to-[#7CE495] transition-bg duration-400`}
             >
               <div className="w-full md:w-[15%]  mx-0">
                 <Image
@@ -68,19 +68,27 @@ const MyWorkExperience = () => {
                 />
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[25%]">
-                <h2 className="text-2xl font-semibold text-white mb-2">
+                <h2 className="text-2xl font-semibold text-white group-hover:text-black  mb-2 ">
                   {el?.companyName}
                 </h2>
-                <p className="text-gray-300"> {el?.position}</p>
+                <p className="text-gray-300 group-hover:text-gray-800 ">
+                  {" "}
+                  {el?.position}
+                </p>
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[25%]">
-                <h2 className="text-2xl font-semibold text-white mb-2">
+                <h2 className="text-2xl font-semibold text-white group-hover:text-black  mb-2">
                   {el?.jobType}
                 </h2>
-                <p className="text-gray-300"> {el?.jobDuration}</p>
+                <p className="text-gray-300 group-hover:text-gray-800">
+                  {" "}
+                  {el?.jobDuration}
+                </p>
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[40%]">
-                <p className="text-gray-300">{el?.description}</p>
+                <p className="text-gray-300 group-hover:text-gray-800">
+                  {el?.description}
+                </p>
               </div>
             </div>
           ))}
