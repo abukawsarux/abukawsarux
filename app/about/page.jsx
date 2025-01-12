@@ -16,8 +16,8 @@ const page = () => {
       <MyWorkExperience />
       <MyCourses />
       <MyEducation />
-      <MyVison />
-      {/* <ClinetLogoList /> */}
+      {/* <MyVison /> */}
+      <ClinetLogoList />
       <LetsTalk />
     </div>
   );

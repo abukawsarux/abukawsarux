@@ -13,21 +13,15 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { portfolioInfo } from "@/config/data";
 
-import LetsTalk from "@/components/home/LetsTalk";
 import ScrollMotionEffect from "@/components/motion/ScrollMotionEffect";
+import Link from "next/link";
+import { LuDribbble } from "react-icons/lu";
+import { FaBehance } from "react-icons/fa";
+import { IoIosLink } from "react-icons/io";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
-
-const portfolioInfo = [
-  {
-    id: 3,
-    cardImage: "assets/portfolio-item/nazara-web.png",
-    fullImage: "assets/portfolio-item/nazara-web-full.jpg",
-    title: "Nazara",
-    category: "Website Design",
-  },
-];
 
 const PortfolioPage = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -58,44 +52,81 @@ const PortfolioPage = () => {
         <div className="mt-14">
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="max-w-[2000px] gap-5 grid grid-cols-12 grid-rows-2 ">
-              {portfolioInfo?.map((el, index) => (
-                <Card key={index} className="col-span-12 sm:col-span-4 ">
-                  <div>
-                    <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
-                      <h4 className="flex justify-center mx-0 !text-sm text-center text-white">
-                        {el?.category}
+              {portfolioInfo.length > 0 &&
+                portfolioInfo?.map((el, index) => (
+                  <Card
+                    key={index}
+                    className=" group col-span-12 sm:col-span-4 bg-[#2c2c2c] p-4"
+                  >
+                    <div className="relative overflow-hidden rounded-2xl h-[300px]">
+                      <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-4 right-4 max-w-32 !p-1 !m-0">
+                        <h4 className="flex justify-center mx-0 !text-sm text-center text-white">
+                          {el?.category}
+                        </h4>
+                      </CardHeader>
+                      <Image
+                        alt="Card background"
+                        className="z-0 object-cover w-full  h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                        src={el?.cardImage}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-white text-start mt-4 text-2xl ">
+                        {el?.title}
                       </h4>
-                    </CardHeader>
-                    <Image
-                      isZoomed
-                      removeWrapper
-                      alt="Card background"
-                      className="z-0 object-cover w-full  h-[300px]"
-                      src={el?.cardImage}
-                    />
-                    <button
-                      className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center  cursor-pointer "
-                      onClick={() => {
-                        onOpen();
-                        setPortfolioId(el?.id);
-                      }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="text-white size-4"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </Card>
-              ))}
+                      <p className="text-white text-start mt-3">{el?.desc}</p>
+
+                      <div className="flex justify-between items-center mt-4">
+                        <button
+                          className="bg-[#75757595] rounded-full p-4 m-2 flex gap-2 text-white justify-center items-center  cursor-pointer  hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                          onClick={() => {
+                            onOpen();
+                            setPortfolioId(el?.id);
+                          }}
+                          title="View Details"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className=" size-4"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span className="leading-[0]"> Quick View</span>
+                        </button>
+                        <Link
+                          href={el?.dribbbleLink}
+                          target="_blank"
+                          className="group bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center   cursor-pointer  items-center gap-2 text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                          title="View on Dribbble"
+                        >
+                          <LuDribbble />
+                        </Link>
+                        <Link
+                          href={el?.behanceLink}
+                          target="_blank"
+                          className="bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center items-center  cursor-pointer text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black "
+                          title="View on Behance"
+                        >
+                          <FaBehance />
+                        </Link>
+                        <Link
+                          href={el?.websiteLink}
+                          target="_blank"
+                          className="bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center items-center  cursor-pointer text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                          title="View Website"
+                        >
+                          <IoIosLink />
+                        </Link>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
             </div>
           </ScrollMotionEffect>
         </div>

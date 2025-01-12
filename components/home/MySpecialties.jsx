@@ -103,7 +103,7 @@ const MySpecialties = () => {
           >
             {specialties.map((el, index) => (
               <motion.div
-                className={`bg-[#181818] rounded-lg w-full h-[200px] p-6 flex flex-col items-start transition-transform duration-500 ease-out ${
+                className={`bg-[#2c2c2c] rounded-lg w-full h-[200px] p-6 flex flex-col items-start transition-transform duration-500 ease-out ${
                   activeIndex === index
                     ? "primary-gradient scale-110 shadow-lg "
                     : "hover:scale-[1.05] hover:-translate-y-[4px] shadow-md"
@@ -115,7 +115,7 @@ const MySpecialties = () => {
                 <div
                   className={`flex items-center justify-center p-4 rounded-full w-14 h-14 ${
                     activeIndex === index
-                      ? "bg-[#181818] text-primary scale-110 shadow-lg border "
+                      ? "bg-[#2c2c2c] text-primary scale-110 shadow-lg border "
                       : "hover:scale-[1.05] hover:-translate-y-[4px] shadow-md  bg-white text-black"
                   }`}
                 >
@@ -144,7 +144,7 @@ const MySpecialties = () => {
               <Link
                 href="mailto:abukawsar47ak@gmail.com"
                 target="_blank"
-                className={`group rounded-lg  w-full h-[415px] p-6 flex flex-col bg-gradient-to-br bg-[#181818] mt-[-1px]   `}
+                className={`group rounded-lg  w-full h-[415px] p-6 flex flex-col bg-gradient-to-br bg-[#2c2c2c] mt-[-1px]   `}
               >
                 <div className="flex items-center rounded-full">
                   <Image

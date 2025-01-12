@@ -31,7 +31,7 @@ const clientLogoList = [
 const ClinetLogoList = () => {
   return (
     <div className="">
-      <div className="container grid grid-cols-3 md:grid-cols-6 items-center gap-x-20 py-6 md:py-12">
+      <div className="container grid grid-cols-3 md:grid-cols-6 items-center gap-x-20 pt-6 md:pt-12">
         {clientLogoList?.map((el, index) => (
           <div className="">
             <Image

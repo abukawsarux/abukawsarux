@@ -26,7 +26,7 @@ const HeroSection = () => {
   const text = "Abu Kawsar".split(" ");
 
   return (
-    <div className="pt-28 md:pt-44 pb-14 md:pb-32">
+    <div className="pt-28 md:pt-44 pb-14 md:pb-32 bg-[#181818]">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 variants={variants}
                 className="mt-5 text-md md:text-3xl font-semibold text-center  text-white"
               >
-                <span className="text-primary">User Experience Engineer</span>
+                <span className="text-primary">UI/UX Engineer</span>
               </motion.p>
 
               <motion.div
@@ -70,7 +70,7 @@ const HeroSection = () => {
               >
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center h-[60px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-black uppercase bg-black border border-black rounded-md hover:bg-primary md:px-8 me-3 md:me-6 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+                  className="flex items-center justify-center px-2 py-3 mb-2 text-sm font-medium text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   Let’s Talk
                   <span className="ml-2">
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="flex items-center justify-center h-[54px] md:h-[56px] w-36 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white bg-black hover:primary-gradient border-gradient rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+                  className="flex items-center justify-center px-2 py-3 mb-2 text-sm font-medium  md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 border-1 border-primary text-primary bg-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   My Work
                   <span className="ml-2">

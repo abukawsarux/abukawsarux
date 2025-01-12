@@ -14,10 +14,10 @@ const SkillLoopSlider = ({ skillsInfo }) => {
         gradient={true}
         gradientColor="black"
       >
-        <div className="flex items-stretch gap-4">
+        <div className="flex items-stretch gap-4 ">
           {skillsInfo.map((el, index) => (
-            <div key={index} className="w-[150px] md:w-[180px] flex-1 gap-3">
-              <div className="p-4 border border-white rounded-lg h-full flex flex-col justify-center">
+            <div key={index} className="w-[150px] md:w-[180px] flex gap-3">
+              <div className="p-4 border bg-[#2c2c2c] border-[#2c2c2c] rounded-lg h-full flex flex-col justify-center w-full">
                 <div className="flex items-center justify-center flex-grow">
                   <Image
                     src={el.icon}

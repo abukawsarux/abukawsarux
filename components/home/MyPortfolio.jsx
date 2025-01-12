@@ -13,44 +13,15 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-
 import Link from "next/link";
+import { portfolioInfo } from "@/config/data";
+
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import { LuDribbble } from "react-icons/lu";
+import { FaBehance } from "react-icons/fa";
+import { IoIosLink } from "react-icons/io";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
-
-const portfolioInfo = [
-  {
-    id: 1,
-    cardImage: "assets/portfolio-item/swop-app.png",
-    fullImage: "assets/portfolio-item/swop-app-full.jpg",
-    title: "Swop App",
-  },
-  {
-    id: 2,
-    cardImage: "assets/portfolio-item/epharma-web.png",
-    fullImage: "assets/portfolio-item/epharma-web-full.jpg",
-    title: "ePharma Web",
-  },
-  {
-    id: 3,
-    cardImage: "assets/portfolio-item/nazara-web.png",
-    fullImage: "assets/portfolio-item/nazara-web-full.jpg",
-    title: "Nazara",
-  },
-  {
-    id: 4,
-    cardImage: "assets/portfolio-item/butterfly-app.png",
-    fullImage: "assets/portfolio-item/butterfly-app-full.jpg",
-    title: "Butterfly App",
-  },
-  {
-    id: 5,
-    cardImage: "assets/portfolio-item/epharma-app.png",
-    fullImage: "assets/portfolio-item/epharma-app-full.jpg",
-    title: "ePharma App",
-  },
-];
 
 const MyPortfolio = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -83,216 +54,105 @@ const MyPortfolio = () => {
         </div>
         <div className="mt-14">
           <ScrollMotionEffect effect="fade-up" duration="2000">
-            <div className="max-w-[2000px] gap-6 grid grid-cols-12 grid-rows-2 ">
-              <Card className="col-span-12 sm:col-span-4 h-[300px] cursor-pointer">
-                <div
-                  onClick={() => {
-                    onOpen();
-                    setPortfolioId(1);
-                  }}
+            <div className="max-w-[2000px] gap-6 grid grid-cols-12  ">
+              {portfolioInfo.slice(0, 3).map((el, index) => (
+                <Card
+                  key={index}
+                  className=" group col-span-12 sm:col-span-4 bg-[#2c2c2c] p-4"
                 >
-                  <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
-                    <h4 className="flex justify-center mx-0 text-sm text-center text-white">
-                      Swop App
+                  <div className="relative overflow-hidden rounded-2xl h-[300px]">
+                    <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-4 right-4 max-w-32 !p-1 !m-0">
+                      <h4 className="flex justify-center mx-0 !text-sm text-center text-white">
+                        {el?.category}
+                      </h4>
+                    </CardHeader>
+                    <Image
+                      alt="Card background"
+                      className="z-0 object-cover w-full  h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                      src={el?.cardImage}
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-white text-start mt-4 text-2xl ">
+                      {el?.title}
                     </h4>
-                  </CardHeader>
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    alt="Card background"
-                    className="z-0 object-cover w-full h-full"
-                    src="assets/portfolio-item/swop-app.png"
-                  />
-                  <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-white size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </Card>
+                    <p className="text-white text-start mt-3">{el?.desc}</p>
 
-              <Card className="col-span-12 sm:col-span-4 h-[300px] cursor-pointer">
-                <div
-                  onClick={() => {
-                    onOpen();
-                    setPortfolioId(2);
-                  }}
-                >
-                  <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
-                    <h4 className="flex justify-center mx-0 text-sm text-center text-white">
-                      ePharma Web
-                    </h4>
-                  </CardHeader>
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    alt="Card background"
-                    className="z-0 object-cover w-full h-full"
-                    src="assets/portfolio-item/epharma-web.png"
-                  />
-                  <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-white size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </Card>
-              <Card className="col-span-12 sm:col-span-4 h-[300px] cursor-pointer">
-                <div
-                  onClick={() => {
-                    onOpen();
-                    setPortfolioId(3);
-                  }}
-                >
-                  <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
-                    <h4 className="flex justify-center mx-0 text-sm text-center text-white">
-                      Nazara
-                    </h4>
-                  </CardHeader>
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    alt="Card background"
-                    className="z-0 object-cover w-full h-full"
-                    src="assets/portfolio-item/nazara-web.png"
-                  />
-                  <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-white size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </Card>
-              <Card
-                isFooterBlurred
-                className="w-full h-[300px] col-span-12 sm:col-span-5 cursor-pointer"
-              >
-                <div
-                  onClick={() => {
-                    onOpen();
-                    setPortfolioId(4);
-                  }}
-                >
-                  <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
-                    <h4 className="flex justify-center mx-0 text-sm text-center text-white">
-                      Butterfly App
-                    </h4>
-                  </CardHeader>
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    alt="Card example background"
-                    className="z-0 object-cover w-full h-full"
-                    src="assets/portfolio-item/butterfly-appp.png"
-                  />
-                  <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-white size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </Card>
-              <Card
-                isFooterBlurred
-                className="w-full h-[300px] col-span-12 sm:col-span-7 cursor-pointer"
-              >
-                <div
-                  onClick={() => {
-                    onOpen();
-                    setPortfolioId(5);
-                  }}
-                >
-                  <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0 ">
-                    <h4 className="flex justify-center mx-0 text-sm text-center text-white">
-                      ePharma App
-                    </h4>
-                  </CardHeader>
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    alt="Relaxing app background"
-                    className="z-0 object-cover w-full h-full"
-                    src="assets/portfolio-item/epharma-app-850X770.png"
-                  />
-
-                  <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-white size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </Card>
+                    <div className="flex justify-between items-center mt-4">
+                      <button
+                        className="bg-[#75757595] rounded-full p-4 m-2 flex gap-2 text-white justify-center items-center  cursor-pointer  hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                        onClick={() => {
+                          onOpen();
+                          setPortfolioId(el?.id);
+                        }}
+                        title="View Details"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className=" size-4"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="leading-[0]"> Quick View</span>
+                      </button>
+                      <Link
+                        href={el?.dribbbleLink}
+                        target="_blank"
+                        className="group bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center   cursor-pointer  items-center gap-2 text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                        title="View on Dribbble"
+                      >
+                        <LuDribbble />
+                      </Link>
+                      <Link
+                        href={el?.behanceLink}
+                        target="_blank"
+                        className="bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center items-center  cursor-pointer text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black "
+                        title="View on Behance"
+                      >
+                        <FaBehance />
+                      </Link>
+                      <Link
+                        href={el?.websiteLink}
+                        target="_blank"
+                        className="bg-[#75757595] rounded-full p-4 m-2 inline-flex justify-center items-center  cursor-pointer text-white hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] duration-400 hover:text-black"
+                        title="View Website"
+                      >
+                        <IoIosLink />
+                      </Link>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
           </ScrollMotionEffect>
           <div className="flex justify-center mx-0 mt-16">
             <ScrollMotionEffect effect="fade-up" duration="2000">
-              <div className="p-[2px] bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] rounded-md">
-                <Link
-                  href={"/portfolio"}
-                  className="flex items-center justify-center h-[54px] md:h-[56px] w-44 md:w-48 mb-2 md:mb-0 text-sm md:text-lg font-medium text-white hover:text-black bg-black rounded-md  hover:bg-gradient-to-r from-[#BFFD3D] to-[#7CE495]"
-                >
-                  View All Works
-                  <span className="ml-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="size-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                </Link>
-              </div>
+              <Link
+                href={"/portfolio"}
+                className="flex items-center justify-center px-2 py-3 mb-2 text-sm font-medium text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+              >
+                View All Works
+                <span className="ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </Link>
             </ScrollMotionEffect>
           </div>
         </div>

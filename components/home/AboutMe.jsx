@@ -8,7 +8,7 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 
 const AboutMe = () => {
   return (
-    <section className="py-1 md:py-20">
+    <section className="py-1 md:py-20 bg-[#181818]">
       <div className="container">
         <div className="flex flex-col items-center justify-between md:flex-row gap-x-10 gap-y-6">
           <div className="w-[100%] md:w-[40%]">
@@ -46,7 +46,7 @@ const AboutMe = () => {
                 <Link
                   href={"/assets/AbuKawsar_UIUX_Engineer.pdf"}
                   target="_blank"
-                  className="flex items-center justify-center px-2 py-2.5 mb-2 text-sm font-medium text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+                  className="flex items-center justify-center px-2 py-3 mb-2 text-sm font-medium text-black md:text-lg md:px-8 me-0 md:me-6 rounded-md max-w-56 mt-8 primary-gradient transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   View Resume
                   <span>

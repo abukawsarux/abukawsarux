@@ -32,7 +32,7 @@ export default function Home() {
       <MySkills />
       <MyPortfolio />
       {/* <ClinetLogoList /> */}
-      <NewsSection />
+      {/* <NewsSection /> */}
       <LetsTalk />
     </div>
   );
