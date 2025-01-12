@@ -44,7 +44,7 @@ const LetsTalk = () => {
     <section className="overflow-hidden">
       <div className="container py-10 md:py-20">
         <ScrollMotionEffect effect="fade-up" duration="2000">
-          <div className="p-10 text-black rounded-xl bg-[#181818]">
+          <div className="p-10 text-black rounded-xl bg-[#2c2c2c]">
             <h2
               className={`text-5xl font-bold text-center text-white ${orbitron.className}`}
             >
