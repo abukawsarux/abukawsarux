@@ -6,32 +6,32 @@ import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
 
-const workExperience = [
+const courses = [
   {
-    imgUrl: "/assets/about/just.png",
-    instituteName: "Jiangsu University of Science and Technology",
-    degree: "BSc in CSE",
-    CGPA: "3.03 (out of 4)",
-    session: "Sep 2018 - Jul 2022",
+    imgUrl: "/assets/about/bayshore.jpg",
+    companyName: "Bayshore",
+    position: "Software Engineer",
+    jobType: "Full-Time",
+    jobDuration: "Jun 2024 - Present",
     description:
-      "During my time at Jiangsu University of Science and Technology, I honed my skills in computer science, embraced new technologies, and collaborated on projects that enhanced my practical and theoretical knowledge.",
+      "Working at Bayshore Communication as a Full Stack Developer has been rewarding. I’ve grown through diverse projects, improving my skills in web development, database management, and cloud services.",
   },
   {
-    imgUrl: "/assets/about/dpi.png",
-    instituteName: "Dinajpur Polytechnic Institute",
-    degree: "Diploma in CE",
-    CGPA: "3.46 (out of 4)",
-    session: "June 2014 - Jul 2018",
+    imgUrl: "/assets/about/itbangla.jpeg",
+    companyName: "IT Bangla Ltd",
+    position: "Software Engineer",
+    jobType: "Full-Time",
+    jobDuration: "Jun 2022 - Dec 2023",
     description:
-      "I pursued a Diploma in Computer Engineering at Dinajpur Polytechnic Institute from June 2014 to July 2018. During this time, I developed strong technical skills and a deep understanding of computer systems and programming.",
+      "This was my first job as a Software Engineer, which I started in January 2022 as a Full Stack Developer. It has been a rewarding experience, allowing me to grow through diverse projects and enhance.",
   },
 ];
 
-const MyEducation = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // State to track the active card
+const MyCourses = () => {
+  const [activeIndex, setActiveIndex] = useState(0); // State to track active card, default is the first card
 
   return (
-    <section className="bg-[#181818] py-6 md:py-16">
+    <section className=" py-6 md:py-16">
       <div className="container">
         <div className="flex flex-col justify-center text-white md:flex-row md:justify-between md:items-start gap-y-4">
           <div className="w-full md:w-[40%]">
@@ -39,7 +39,7 @@ const MyEducation = () => {
               <h2
                 className={`text-4xl md:text-5xl text-center md:text-left ${orbitron.className}`}
               >
-                My Education
+                My Courses
               </h2>
             </ScrollMotionEffect>
           </div>
@@ -56,63 +56,63 @@ const MyEducation = () => {
         </div>
 
         <div className="mt-10 md:mt-16">
-          {workExperience?.map((el, index) => (
+          {courses?.map((el, index) => (
             <div
               key={index}
-              className={`p-10 flex md:flex-row flex-col items-center justify-between my-4 rounded-2xl transition-bg duration-400 ${
+              className={`group p-10 flex md:flex-row flex-col items-center justify-between my-4 rounded-2xl transition-bg duration-400 ${
                 activeIndex === index
-                  ? "primary-gradient text-black"
+                  ? "bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] text-black"
                   : "bg-[#2c2c2c] text-gray-300"
               }`}
               onMouseEnter={() => setActiveIndex(index)} // Set the hovered card as active
             >
-              <div className="w-full md:w-[15%] mx-0 mt-3 md:mt-0">
+              <div className="w-full md:w-[15%] mx-0">
                 <Image
                   src={el?.imgUrl}
-                  alt={el?.instituteName}
+                  alt={el?.companyName}
                   width={200}
                   height={200}
                   className="size-16 lg:size-20 2xl:size-24 h-auto  rounded-full"
                   priority
                 />
               </div>
-              <div className="w-full md:w-[25%] mt-3 md:mt-0">
+              <div className="mt-3 md:mt-0 w-full md:w-[25%]">
                 <h2
                   className={`text-2xl font-semibold ${
                     activeIndex === index ? "text-black" : "text-white"
-                  }`}
+                  } group-hover:text-black mb-2`}
                 >
-                  {el?.degree}
+                  {el?.companyName}
                 </h2>
                 <p
                   className={`${
                     activeIndex === index ? "text-gray-800" : "text-gray-300"
-                  }`}
+                  } group-hover:text-gray-800`}
                 >
-                  {el?.instituteName}
+                  {el?.position}
                 </p>
               </div>
-              <div className="w-full md:w-[25%] mt-3 md:mt-0">
+              <div className="mt-3 md:mt-0 w-full md:w-[25%]">
                 <h2
                   className={`text-2xl font-semibold ${
                     activeIndex === index ? "text-black" : "text-white"
-                  }`}
+                  } group-hover:text-black mb-2`}
                 >
-                  {el?.CGPA}
+                  {el?.jobType}
                 </h2>
                 <p
                   className={`${
                     activeIndex === index ? "text-gray-800" : "text-gray-300"
-                  }`}
+                  } group-hover:text-gray-800`}
                 >
-                  {el?.session}
+                  {el?.jobDuration}
                 </p>
               </div>
-              <div className="w-full md:w-[40%] mt-3 md:mt-0">
+              <div className="mt-3 md:mt-0 w-full md:w-[40%]">
                 <p
                   className={`${
                     activeIndex === index ? "text-gray-800" : "text-gray-300"
-                  }`}
+                  } group-hover:text-gray-800`}
                 >
                   {el?.description}
                 </p>
@@ -125,4 +125,4 @@ const MyEducation = () => {
   );
 };
 
-export default MyEducation;
+export default MyCourses;

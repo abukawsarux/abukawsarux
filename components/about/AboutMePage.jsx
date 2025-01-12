@@ -8,7 +8,7 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 
 const AboutMePage = () => {
   return (
-    <section className="pt-10 pb-6  md:pt-20 md:pb-10">
+    <section className="pt-10 pb-6  md:pt-20 md:pb-10 bg-[#181818]">
       <div className="container">
         <div className="flex flex-col items-center justify-between md:flex-row gap-x-10">
           <div className="w-[100%] md:w-[40%]">
@@ -53,7 +53,7 @@ const AboutMePage = () => {
         </div>
         <div className="mt-12 md:mt-20">
           <ScrollMotionEffect effect="fade-left" duration="2000">
-            <ul className="grid grid-cols-2 lg:grid-cols-4 justify-between gap-7 w-full">
+            <ul className="grid grid-cols-2 lg:grid-cols-4 justify-between items-end gap-7 w-full">
               <li className="pb-3 sm:pb-4">
                 <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse">
                   <div className="flex-shrink-0">

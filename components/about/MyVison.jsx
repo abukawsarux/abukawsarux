@@ -19,7 +19,7 @@ const MyVision = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <section className="bg-[#181818] py-6 md:py-20">
+    <section className=" py-6 md:py-20">
       <div className="container">
         <div className="flex flex-col justify-center text-white md:flex-row md:justify-between md:items-start gap-y-4">
           <div className="w-full md:w-[35%]">

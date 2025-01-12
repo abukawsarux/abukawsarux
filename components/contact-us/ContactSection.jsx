@@ -124,13 +124,13 @@ const ContactSection = () => {
         </div>
 
         <div className="grid items-start justify-between grid-cols-1 mt-12 lg:grid-cols-3 md:gap-x-10 gap-x-0 md:mt-20">
-          <div className="bg-[#181818] p-6 rounded-2xl gap-y-14">
+          <div className="bg-[#2c2c2c] p-6 rounded-2xl gap-y-14">
             <ScrollMotionEffect effect="fade-up" duration="2000">
-              <h2 class="text-2xl font-semibold text-white py-6 border-b-1 border-[#222121]">
+              <h2 class="text-2xl font-semibold text-white py-6 border-b-1 border-[#181818]">
                 Contact Details
               </h2>
               <ul class="space-y-1 text-white list-none list-inside">
-                <li className="py-6 border-[#222121] border-b-1">
+                <li className="py-6 border-[#181818] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
                       <IoLocationSharp className="text-primary size-7" />
@@ -141,7 +141,7 @@ const ContactSection = () => {
                     abukawsar47ak@gmail.com
                   </h5>
                 </li>
-                <li className="py-6 border-[#222121] border-b-1">
+                <li className="py-6 border-[#181818] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
                       <FaPhoneAlt className="text-primary size-6" />
@@ -154,7 +154,7 @@ const ContactSection = () => {
                     +880 1307102810
                   </h5>
                 </li>
-                <li className="py-6 border-[#222121] border-b-1">
+                <li className="py-6 border-[#181818] border-b-1">
                   <div className="flex items-center gap-x-2">
                     <span>
                       <IoLocationSharp className="text-primary size-7" />
@@ -175,14 +175,14 @@ const ContactSection = () => {
             </ScrollMotionEffect>
           </div>
 
-          <div className="flex flex-col col-span-2 mt-6 md:mt-0 bg-[#181818] p-6 rounded-2xl">
+          <div className="flex flex-col col-span-2 mt-6 md:mt-0 bg-[#2c2c2c] p-6 rounded-2xl">
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <form className="w-full" onSubmit={handleSubmit}>
                 <div className="flex flex-col items-center w-full gap-4 mb-6 md:flex-row">
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Enter Name</p>
                     <input
-                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#181818] border border-[#181818] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="Sadit Hasan"
                       required
                       type="text"
@@ -200,7 +200,7 @@ const ContactSection = () => {
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Phone</p>
                     <input
-                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#181818] border border-[#181818] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="+1 408 XXX XXXX"
                       required
                       type="text"
@@ -221,7 +221,7 @@ const ContactSection = () => {
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Enter Email</p>
                     <input
-                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#181818] border border-[#181818] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="example@gmail.com"
                       required
                       type="email"
@@ -239,7 +239,7 @@ const ContactSection = () => {
                   <div className="w-full md:flex-1">
                     <p className="text-white ">Country</p>
                     <input
-                      class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
+                      class="bg-[#181818] border border-[#181818] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-3 placeholder:text-lg pl-5 mt-3"
                       placeholder="USA"
                       required
                       type="text"
@@ -263,7 +263,7 @@ const ContactSection = () => {
                   <textarea
                     rows={10}
                     id="message"
-                    class="bg-[#222121] border border-[#222121] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5 mt-3"
+                    class="bg-[#181818] border border-[#181818] text-gray-900 text-lg rounded-lg focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5 mt-3"
                     placeholder="Write here..."
                     required
                     name="message"

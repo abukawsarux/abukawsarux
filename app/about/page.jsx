@@ -6,6 +6,7 @@ import ClinetLogoList from "@/components/shared/ClientLogoList";
 import MyVison from "@/components/about/MyVison";
 import MyWorkExperience from "@/components/about/MyWorkExperience";
 import MyEducation from "@/components/about/MyEducation";
+import MyCourses from "@/components/about/MyCourses";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <AboutMePage />
       <MySkills />
       <MyWorkExperience />
+      <MyCourses />
       <MyEducation />
       <MyVison />
       {/* <ClinetLogoList /> */}

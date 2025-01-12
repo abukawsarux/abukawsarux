@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Orbitron } from "next/font/google";
 import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
@@ -8,7 +9,7 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 const workExperience = [
   {
     imgUrl: "/assets/about/bayshore.jpg",
-    companyName: "Bayshroe",
+    companyName: "Bayshore",
     position: "Software Engineer",
     jobType: "Full-Time",
     jobDuration: "Jun 2024 - Present",
@@ -22,15 +23,17 @@ const workExperience = [
     jobType: "Full-Time",
     jobDuration: "Jun 2022 - Dec 2023",
     description:
-      "This was my first job as a Software Engineer, which I started in January 2022 as a Full Stack Developer. It has been a rewarding experience, allowing me to grow through diverse projects and enhance",
+      "This was my first job as a Software Engineer, which I started in January 2022 as a Full Stack Developer. It has been a rewarding experience, allowing me to grow through diverse projects and enhance.",
   },
 ];
 
 const MyWorkExperience = () => {
+  const [activeIndex, setActiveIndex] = useState(0); // State to track active card, default is the first card
+
   return (
     <section className="bg-[#181818] py-6 md:py-16">
       <div className="container">
-        <div className="flex flex-col justify-center text-black md:flex-row md:justify-between md:items-start gap-y-4">
+        <div className="flex flex-col justify-center text-white md:flex-row md:justify-between md:items-start gap-y-4">
           <div className="w-full md:w-[40%]">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <h2
@@ -55,38 +58,62 @@ const MyWorkExperience = () => {
         <div className="mt-10 md:mt-16">
           {workExperience?.map((el, index) => (
             <div
-              className={`group p-10 flex md:flex-row flex-col items-center justify-between my-4 rounded-2xl bg-[#0A0A0A] hover:bg-gradient-to-r hover:from-[#BFFD3D] hover:to-[#7CE495] transition-bg duration-400`}
+              key={index}
+              className={`group p-10 flex md:flex-row flex-col items-center justify-between my-4 rounded-2xl transition-bg duration-400 ${
+                activeIndex === index
+                  ? "bg-gradient-to-r from-[#BFFD3D] to-[#7CE495] text-black"
+                  : "bg-[#2c2c2c] text-gray-300"
+              }`}
+              onMouseEnter={() => setActiveIndex(index)} // Set the hovered card as active
             >
-              <div className="w-full md:w-[15%]  mx-0">
+              <div className="w-full md:w-[15%] mx-0">
                 <Image
                   src={el?.imgUrl}
                   alt={el?.companyName}
                   width={200}
                   height={200}
-                  className=" size-16 h-auto bg-cover bg-center rounded-full"
+                  className="size-16 lg:size-20 2xl:size-24 h-auto  rounded-full"
                   priority
                 />
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[25%]">
-                <h2 className="text-2xl font-semibold text-white group-hover:text-black  mb-2 ">
+                <h2
+                  className={`text-2xl font-semibold ${
+                    activeIndex === index ? "text-black" : "text-white"
+                  } group-hover:text-black mb-2`}
+                >
                   {el?.companyName}
                 </h2>
-                <p className="text-gray-300 group-hover:text-gray-800 ">
-                  {" "}
+                <p
+                  className={`${
+                    activeIndex === index ? "text-gray-800" : "text-gray-300"
+                  } group-hover:text-gray-800`}
+                >
                   {el?.position}
                 </p>
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[25%]">
-                <h2 className="text-2xl font-semibold text-white group-hover:text-black  mb-2">
+                <h2
+                  className={`text-2xl font-semibold ${
+                    activeIndex === index ? "text-black" : "text-white"
+                  } group-hover:text-black mb-2`}
+                >
                   {el?.jobType}
                 </h2>
-                <p className="text-gray-300 group-hover:text-gray-800">
-                  {" "}
+                <p
+                  className={`${
+                    activeIndex === index ? "text-gray-800" : "text-gray-300"
+                  } group-hover:text-gray-800`}
+                >
                   {el?.jobDuration}
                 </p>
               </div>
               <div className="mt-3 md:mt-0 w-full md:w-[40%]">
-                <p className="text-gray-300 group-hover:text-gray-800">
+                <p
+                  className={`${
+                    activeIndex === index ? "text-gray-800" : "text-gray-300"
+                  } group-hover:text-gray-800`}
+                >
                   {el?.description}
                 </p>
               </div>
