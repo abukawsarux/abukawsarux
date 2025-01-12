@@ -21,131 +21,11 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 
 const portfolioInfo = [
   {
-    id: 1,
-    cardImage: "assets/portfolio-item/swop-app.png",
-    fullImage: "assets/portfolio-item/swop-app-full.jpg",
-    title: "Swop App",
-  },
-  {
-    id: 2,
-    cardImage: "assets/portfolio-item/epharma-web.png",
-    fullImage: "assets/portfolio-item/epharma-web-full.jpg",
-    title: "ePharma Web",
-  },
-  {
     id: 3,
     cardImage: "assets/portfolio-item/nazara-web.png",
     fullImage: "assets/portfolio-item/nazara-web-full.jpg",
     title: "Nazara",
-  },
-  {
-    id: 4,
-    cardImage: "assets/portfolio-item/butterfly-app.png",
-    fullImage: "assets/portfolio-item/butterfly-app-full.jpg",
-    title: "Butterfly App",
-  },
-  {
-    id: 5,
-    cardImage: "assets/portfolio-item/epharma-app.png",
-    fullImage: "assets/portfolio-item/epharma-app-full.jpg",
-    title: "ePharma App",
-  },
-  {
-    id: 6,
-    cardImage: "assets/portfolio-item/swop-web.png",
-    fullImage: "assets/portfolio-item/swop-web-full.jpg",
-    title: "Swop Web",
-  },
-  {
-    id: 7,
-    cardImage: "assets/portfolio-item/dxg-web.png",
-    fullImage: "assets/portfolio-item/dxg-web-full.jpg",
-    title: "DXG",
-  },
-  {
-    id: 8,
-    cardImage: "assets/portfolio-item/migrate-law-web.png",
-    fullImage: "assets/portfolio-item/migrate-law-web-full.jpg",
-    title: "Migrate Law",
-  },
-  {
-    id: 9,
-    cardImage: "assets/portfolio-item/butterfly-lighthouse-web.png",
-    fullImage: "assets/portfolio-item/butterfly-lighthouse-web-full.jpg",
-    title: "Butterfly",
-  },
-  {
-    id: 10,
-    cardImage: "assets/portfolio-item/tax-pro-dashboard.png",
-    fullImage: "assets/portfolio-item/tax-pro-dashboard-full.jpg",
-    title: "10x Tax Pro",
-  },
-  {
-    id: 11,
-    cardImage: "assets/portfolio-item/trip-law.png",
-    fullImage: "assets/portfolio-item/trip-law-full.jpg",
-    title: "Trip Law",
-  },
-  {
-    id: 12,
-    cardImage: "assets/portfolio-item/apex-advisor.png",
-    fullImage: "assets/portfolio-item/apex-advisor-full.jpg",
-    title: "Apex Advisor",
-  },
-  {
-    id: 13,
-    cardImage: "assets/portfolio-item/turnabroad.png",
-    fullImage: "assets/portfolio-item/turnabroad-full.jpg",
-    title: "Turn Abroad",
-  },
-  {
-    id: 14,
-    cardImage: "assets/portfolio-item/logicsoft.png",
-    fullImage: "assets/portfolio-item/logicsoft-full.jpg",
-    title: "Logicsoft",
-  },
-  {
-    id: 15,
-    cardImage: "assets/portfolio-item/shannonit.png",
-    fullImage: "assets/portfolio-item/shannonit-full.jpg",
-    title: "Shannonit",
-  },
-  {
-    id: 16,
-    cardImage: "assets/portfolio-item/shannonit.png",
-    fullImage: "assets/portfolio-item/shannonit-full.jpg",
-    title: "Shannonit",
-  },
-  {
-    id: 17,
-    cardImage: "assets/portfolio-item/simplestate-web.png",
-    fullImage: "assets/portfolio-item/simplestate-web-full.jpg",
-    title: "SimpleState",
-  },
-  {
-    id: 18,
-    cardImage: "assets/portfolio-item/travler.png",
-    fullImage: "assets/portfolio-item/travler-full.jpg",
-    title: "Travler",
-  },
-  {
-    id: 19,
-    cardImage: "assets/portfolio-item/credit-life.png",
-    fullImage: "assets/portfolio-item/credit-life-full.jpg",
-    title: "Credit Life",
-  },
-
-  {
-    id: 21,
-    cardImage: "assets/portfolio-item/ticket-2.png",
-    fullImage: "assets/portfolio-item/ticket-2-full.jpg",
-    title: "Ticket Web",
-  },
-  {
-    id: 22,
-    cardImage: "assets/portfolio-item/ticket-1.png",
-    fullImage: "assets/portfolio-item/ticket-1-full.jpg",
-    title: "Ticket App",
+    category: "Website Design",
   },
 ];
 
@@ -179,29 +59,27 @@ const PortfolioPage = () => {
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="max-w-[2000px] gap-5 grid grid-cols-12 grid-rows-2 ">
               {portfolioInfo?.map((el, index) => (
-                <Card
-                  key={index}
-                  className="col-span-12 sm:col-span-4 h-[300px] cursor-pointer"
-                >
-                  <div
-                    onClick={() => {
-                      onOpen();
-                      setPortfolioId(el?.id);
-                    }}
-                  >
+                <Card key={index} className="col-span-12 sm:col-span-4 ">
+                  <div>
                     <CardHeader className="absolute z-10 flex-col !items-center bg-[#75757595] rounded-full top-2 right-2 max-w-32 !p-1 !m-0">
                       <h4 className="flex justify-center mx-0 !text-sm text-center text-white">
-                        {el?.title}
+                        {el?.category}
                       </h4>
                     </CardHeader>
                     <Image
                       isZoomed
                       removeWrapper
                       alt="Card background"
-                      className="z-0 object-cover w-full h-full"
+                      className="z-0 object-cover w-full  h-[300px]"
                       src={el?.cardImage}
                     />
-                    <button className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center absolute bottom-0 z-10 cursor-pointer ">
+                    <button
+                      className="bg-[#75757595] rounded-full p-4 m-2 flex justify-center items-center  cursor-pointer "
+                      onClick={() => {
+                        onOpen();
+                        setPortfolioId(el?.id);
+                      }}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
